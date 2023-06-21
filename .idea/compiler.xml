@@ -18,7 +18,6 @@
       <module name="common" target="1.8" />
       <module name="common-util" target="1.8" />
       <module name="model" target="1.8" />
-      <module name="model-util" target="1.8" />
       <module name="service" target="1.8" />
       <module name="service-util" target="1.8" />
       <module name="service_hosp" target="1.8" />
@@ -31,7 +30,6 @@
       <module name="common" options="" />
       <module name="common-util" options="-parameters" />
       <module name="model" options="-parameters" />
-      <module name="model-util" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="service-util" options="-parameters" />
       <module name="service_hosp" options="-parameters" />
