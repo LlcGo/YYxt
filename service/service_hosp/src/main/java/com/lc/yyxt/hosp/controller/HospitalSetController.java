@@ -27,6 +27,7 @@ import java.util.Random;
  */
 @RestController
 @RequestMapping("/admin/hosp/hospitalSet")
+@CrossOrigin
 public class HospitalSetController {
     @Autowired
     private HospitalSetService hospitalSetService;
@@ -62,7 +63,7 @@ public class HospitalSetController {
      * @param hospitalSetQueryVo 封装前端传来的数据 hoscode  and hosname
      * @return
      */
-    @PostMapping("findPageHospSet/{current}/{limit}")
+    @PostMapping("/findPageHospSet/{current}/{limit}")
     public Result<Page<HospitalSet>> Page(@PathVariable("current") Integer current,
                                           @PathVariable("limit") Integer limit,
                                           @RequestBody(required = false) HospitalSetQueryVo hospitalSetQueryVo){
@@ -154,7 +155,7 @@ public class HospitalSetController {
      * @param status 1 为解锁 0为 锁定
      * @return
      */
-    @PutMapping("lockHospitalSet/{id}/{status}")
+    @PutMapping("/lockHospitalSet/{id}/{status}")
     public Result<Boolean> lockHospitalSet(@PathVariable("id") Long id,
                                   @PathVariable("status") Integer status){
         HospitalSet hospitalSet = hospitalSetService.getById(id);
@@ -167,7 +168,7 @@ public class HospitalSetController {
     }
 
     // 发送签名密钥
-    @PutMapping("sendKey/{id}")
+    @PutMapping("/sendKey/{id}")
     public Result lockHospitalSet(@PathVariable("id") Long id){
         HospitalSet hospitalSet = hospitalSetService.getById(id);
         String signKey = hospitalSet.getSignKey();

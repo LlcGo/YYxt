@@ -14,6 +14,7 @@
     <modules>
         <module>service_user</module>
         <module>service_hosp</module>
+        <module>service_cmn</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -48,6 +49,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
         <!-- 服务调用feign -->
 <!--        <dependency>-->
@@ -84,7 +91,8 @@
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
-                <includes> <include>**/*.yml</include>
+                <includes>
+                    <include>**/*.yml</include>
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
                 </includes>
