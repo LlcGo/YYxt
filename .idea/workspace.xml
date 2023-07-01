@@ -1,38 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7165de23-2f30-4b92-bb19-dd3b2b602430" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/lc/yyxt/common/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/main/java/com/lc/yyxt/cmn/CmnService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/main/java/com/lc/yyxt/cmn/config/DicDataListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/main/java/com/lc/yyxt/cmn/config/MapperConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/main/java/com/lc/yyxt/cmn/controller/CmnController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/main/java/com/lc/yyxt/cmn/mapper/DictMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/main/java/com/lc/yyxt/cmn/mapper/xml/DictMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/main/java/com/lc/yyxt/cmn/service/DictService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/main/java/com/lc/yyxt/cmn/service/impl/DictServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/test/java/com/lc/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/test/java/com/lc/UserDataListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_cmn/src/test/java/com/lc/testEasyExcel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_hosp/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service_hosp/src/test/java/com/lc/testMongdb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="7165de23-2f30-4b92-bb19-dd3b2b602430" name="Default Changelist" comment="7/1 test">
+      <change afterPath="$PROJECT_DIR$/service/service_hosp/src/test/java/com/lc/TestReopsitory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service_hosp/src/test/java/com/lc/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service_hosp/src/test/java/com/lc/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/service-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_hosp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/config/MapperConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/config/MapperConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/controller/HospitalSetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/controller/HospitalSetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_user/service_user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_user/service_user.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service_hosp/src/test/java/com/lc/testMongdb.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/test/java/com/lc/testMongdb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,9 +79,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="mybatis-config.xml" />
         <option value="mybatis-mapper" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -147,7 +121,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../伙伴匹配/luoluogo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -184,21 +158,24 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.testMongdb.addDocument">
-    <configuration name="testEasyExcel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lc.testEasyExcel" />
-      <module name="service_cmn" />
+  <component name="RunManager" selected="JUnit.TestReopsitory.addDocument">
+    <configuration name="TestReopsitory.addDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service_hosp" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.lc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.lc" />
+      <option name="MAIN_CLASS_NAME" value="com.lc.TestReopsitory" />
+      <option name="METHOD_NAME" value="addDocument" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testMongdb.addDocument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testMongdb.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service_hosp" />
       <extension name="coverage">
         <pattern>
@@ -208,34 +185,56 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.lc" />
       <option name="MAIN_CLASS_NAME" value="com.lc.testMongdb" />
-      <option name="METHOD_NAME" value="addDocument" />
+      <option name="METHOD_NAME" value="delete" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CmnService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="service_cmn" />
+    <configuration name="testMongdb.findUserLikeUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service_hosp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lc.yyxt.cmn.*" />
+          <option name="PATTERN" value="com.lc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lc.yyxt.cmn.CmnService" />
+      <option name="PACKAGE_NAME" value="com.lc" />
+      <option name="MAIN_CLASS_NAME" value="com.lc.testMongdb" />
+      <option name="METHOD_NAME" value="findUserLikeUsername" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceHospApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="testMongdb.findUserPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service_hosp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lc.yyxt.hosp.*" />
+          <option name="PATTERN" value="com.lc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lc.yyxt.hosp.ServiceHospApplication" />
+      <option name="PACKAGE_NAME" value="com.lc" />
+      <option name="MAIN_CLASS_NAME" value="com.lc.testMongdb" />
+      <option name="METHOD_NAME" value="findUserPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testMongdb.updateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service_hosp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lc" />
+      <option name="MAIN_CLASS_NAME" value="com.lc.testMongdb" />
+      <option name="METHOD_NAME" value="updateUser" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -249,10 +248,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.testMongdb.addDocument" />
-        <item itemvalue="Spring Boot.ServiceHospApplication" />
-        <item itemvalue="Spring Boot.CmnService" />
-        <item itemvalue="Application.testEasyExcel" />
+        <item itemvalue="JUnit.TestReopsitory.addDocument" />
+        <item itemvalue="JUnit.testMongdb.findUserLikeUsername" />
+        <item itemvalue="JUnit.testMongdb.delete" />
+        <item itemvalue="JUnit.testMongdb.updateUser" />
+        <item itemvalue="JUnit.testMongdb.findUserPage" />
       </list>
     </recent_temporary>
   </component>
@@ -265,11 +265,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -319,6 +314,9 @@
       <workItem from="1687846065747" duration="10394000" />
       <workItem from="1687859909253" duration="659000" />
       <workItem from="1687929580098" duration="7071000" />
+      <workItem from="1687946782394" duration="814000" />
+      <workItem from="1688191968637" duration="654000" />
+      <workItem from="1688193704554" duration="5690000" />
     </task>
     <task id="LOCAL-00001" summary="6/18 微服务创建">
       <created>1687073108693</created>
@@ -341,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687345864162</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="6/28 test mongdb">
+      <created>1687946817734</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687946817735</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +357,8 @@
     <MESSAGE value="6/18 微服务创建" />
     <MESSAGE value="6/18 大致模块搭建完毕" />
     <MESSAGE value="6/21 入驻医院接口 CRUD 封装返回类与全局异常处理类" />
-    <option name="LAST_COMMIT_MESSAGE" value="6/21 入驻医院接口 CRUD 封装返回类与全局异常处理类" />
+    <MESSAGE value="6/28 test mongdb" />
+    <option name="LAST_COMMIT_MESSAGE" value="6/28 test mongdb" />
   </component>
   <component name="WindowStateProjectService">
     <state x="292" y="0" key="#Notifications" timestamp="1687512084080">
@@ -379,18 +385,18 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="786" y="659" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1600.852@0.0.1600.852" timestamp="1687329580604" />
-    <state x="154" y="0" key="CommitChangelistDialog2" timestamp="1687345861288">
+    <state x="154" y="0" key="CommitChangelistDialog2" timestamp="1688199442400">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="154" y="0" key="CommitChangelistDialog2/0.0.1600.852@0.0.1600.852" timestamp="1687345861288" />
+    <state x="154" y="0" key="CommitChangelistDialog2/0.0.1600.852@0.0.1600.852" timestamp="1688199442400" />
     <state width="459" height="761" key="DebuggerActiveHint" timestamp="1687853985636">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state width="459" height="761" key="DebuggerActiveHint/0.0.1600.852@0.0.1600.852" timestamp="1687853985636" />
-    <state x="608" y="72" key="FileChooserDialogImpl" timestamp="1687942471460">
+    <state x="608" y="72" key="FileChooserDialogImpl" timestamp="1687950951057">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="608" y="72" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1687942471460" />
+    <state x="608" y="72" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1687950951057" />
     <state x="617" y="299" width="366" height="366" key="Gitee.ShareDialog" timestamp="1687073344357">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
@@ -399,22 +405,22 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="645" y="286" width="339" height="279" key="Github.ShareDialog/0.0.1600.852@0.0.1600.852" timestamp="1687073416419" />
-    <state width="1547" height="396" key="GridCell.Tab.0.bottom" timestamp="1687944935857">
+    <state width="1547" height="178" key="GridCell.Tab.0.bottom" timestamp="1688197066781">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1547" height="396" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1687944935857" />
-    <state width="1547" height="396" key="GridCell.Tab.0.center" timestamp="1687944935857">
+    <state width="1547" height="178" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1688197066781" />
+    <state width="1547" height="178" key="GridCell.Tab.0.center" timestamp="1688197066781">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1547" height="396" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1687944935857" />
-    <state width="1547" height="396" key="GridCell.Tab.0.left" timestamp="1687944935857">
+    <state width="1547" height="178" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1688197066781" />
+    <state width="1547" height="178" key="GridCell.Tab.0.left" timestamp="1688197066781">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1547" height="396" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1687944935857" />
-    <state width="1547" height="396" key="GridCell.Tab.0.right" timestamp="1687944935857">
+    <state width="1547" height="178" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1688197066781" />
+    <state width="1547" height="178" key="GridCell.Tab.0.right" timestamp="1688197066781">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1547" height="396" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1687944935857" />
+    <state width="1547" height="178" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1688197066781" />
     <state width="1056" height="283" key="GridCell.Tab.1.bottom" timestamp="1687944935855">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
@@ -451,14 +457,14 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="217" y="0" key="Maven.ArtifactSearchDialog/0.0.1600.852@0.0.1600.852" timestamp="1687332090424" />
-    <state x="57" y="0" key="SettingsEditor" timestamp="1687758089090">
+    <state x="197" y="0" key="SettingsEditor" timestamp="1688193936599">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="57" y="0" key="SettingsEditor/0.0.1600.852@0.0.1600.852" timestamp="1687758089090" />
-    <state x="292" y="83" key="Vcs.Push.Dialog.v2" timestamp="1687345890266">
+    <state x="197" y="0" key="SettingsEditor/0.0.1600.852@0.0.1600.852" timestamp="1688193936599" />
+    <state x="292" y="83" key="Vcs.Push.Dialog.v2" timestamp="1687946868910">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="292" y="83" key="Vcs.Push.Dialog.v2/0.0.1600.852@0.0.1600.852" timestamp="1687345890266" />
+    <state x="292" y="83" key="Vcs.Push.Dialog.v2/0.0.1600.852@0.0.1600.852" timestamp="1687946868910" />
     <state x="592" y="195" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1687075033912">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
