@@ -2,7 +2,6 @@ package com.lc.yyxt.hosp.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.lc.yygh.model.hosp.Hospital;
-import com.lc.yygh.model.hosp.HospitalSet;
 import com.lc.yyxt.hosp.repostiory.HospitalRepository;
 import com.lc.yyxt.hosp.service.HospitalService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +38,10 @@ public class HospitalServiceImpl implements HospitalService {
         }
         hospitalRepository.save(hospital);
 
+    }
+
+    @Override
+    public Hospital getHospital(String hoscode) {
+        return hospitalRepository.getHospitalByHoscode(hoscode);
     }
 }
