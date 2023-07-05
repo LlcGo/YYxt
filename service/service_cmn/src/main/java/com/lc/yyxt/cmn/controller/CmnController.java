@@ -42,4 +42,17 @@ public class CmnController {
          return Result.ok(dictService.findChildDate(id));
     }
 
+    @GetMapping("/{value}/{dictCode}")
+    public Result<String> getName(@PathVariable String value,
+                                  @PathVariable String dictCode){
+          return Result.ok(dictService.getDicName(value,dictCode));
+    }
+
+
+    @GetMapping("/{value}")
+    public Result<String> getName(@PathVariable String value){
+        return Result.ok(dictService.getDicName(" ",value));
+    }
+
+
 }

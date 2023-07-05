@@ -3,20 +3,25 @@ package com.lc.yyxt.hosp.controller;
 import com.lc.jyxt.common.exception.YyghException;
 import com.lc.jyxt.common.result.Result;
 import com.lc.jyxt.common.result.ResultCodeEnum;
+import com.lc.yygh.model.hosp.Department;
 import com.lc.yygh.model.hosp.Hospital;
+import com.lc.yygh.model.hosp.Schedule;
 import com.lc.yyxt.hosp.helper.HttpRequestHelper;
 import com.lc.yyxt.hosp.service.DepartmentService;
 import com.lc.yyxt.hosp.service.HospitalService;
 import com.lc.yyxt.hosp.service.HospitalSetService;
+import com.lc.yyxt.hosp.service.ScheduleService;
 import com.lc.yyxt.hosp.utils.MD5;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,6 +40,9 @@ public class ApiController {
 
     @Resource
     private HospitalSetService hospitalSetService;
+
+    @Resource
+    private ScheduleService scheduleService;
 
     @Resource
     private DepartmentService departmentService;
@@ -84,6 +92,55 @@ public class ApiController {
         if(!res){
             throw new YyghException(ResultCodeEnum.SERVICE_ERROR);
         }
+        return Result.ok();
+    }
+
+    //查询所有的科室接口
+    @PostMapping("/department/list")
+    public Result<Page<Department>> list(HttpServletRequest request){
+        Map<String, String[]> requesMap = request.getParameterMap();
+        Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
+        checkSignKey(param);
+        Page<Department> departmentList = departmentService.findDepartment(param);
+        return Result.ok(departmentList);
+    }
+
+    @PostMapping("/department/remove")
+    public Result remove(HttpServletRequest request){
+        Map<String, String[]> requesMap = request.getParameterMap();
+        Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
+        checkSignKey(param);
+        Boolean remove = departmentService.remove(param);
+        if(!remove){
+            throw new YyghException(ResultCodeEnum.DATA_ERROR);
+        }
+        return Result.ok();
+    }
+
+    @PostMapping("/schedule/list")
+    public Result<Page<Schedule>> scheduleList(HttpServletRequest request){
+        Map<String, String[]> requesMap = request.getParameterMap();
+        Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
+        checkSignKey(param);
+        Page<Schedule> schedulePage = scheduleService.schedulePage(param);
+        return Result.ok(schedulePage);
+    }
+
+    @PostMapping("/schedule/remove")
+    public Result scheduleRemove(HttpServletRequest request){
+        Map<String, String[]> requesMap = request.getParameterMap();
+        Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
+        checkSignKey(param);
+        scheduleService.remove(param);
+        return Result.ok();
+    }
+
+    @PostMapping("/saveSchedule")
+    public Result saveSchedule(HttpServletRequest request){
+        Map<String, String[]> requesMap = request.getParameterMap();
+        Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
+        checkSignKey(param);
+        scheduleService.saveSchedule(param);
         return Result.ok();
     }
 }

@@ -1,10 +1,14 @@
 package com.lc.yyxt.hosp.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.lc.HospitalQueryVo;
+import com.lc.yygh.model.hosp.Department;
 import com.lc.yygh.model.hosp.Hospital;
 import com.lc.yyxt.hosp.repostiory.HospitalRepository;
 import com.lc.yyxt.hosp.service.HospitalService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -43,5 +47,23 @@ public class HospitalServiceImpl implements HospitalService {
     @Override
     public Hospital getHospital(String hoscode) {
         return hospitalRepository.getHospitalByHoscode(hoscode);
+    }
+
+    @Override
+    public Page<Hospital> selectPage(Integer pageSize, Integer pageNum, HospitalQueryVo hospitalQueryVo) {
+        Sort sort = Sort.by(Sort.Direction.DESC, "createTime");
+        //0为第一页
+        Pageable pageable = PageRequest.of(pageSize-1, pageNum, sort);
+
+        //创建匹配器，即如何使用查询条件
+        ExampleMatcher matcher = ExampleMatcher.matching() //构建对象
+                .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING) //改变默认字符串匹配方式：模糊查询
+                .withIgnoreCase(true); //改变默认大小写忽略方式：忽略大小
+        //创建实例
+        Hospital hospital = new Hospital();
+        BeanUtils.copyProperties(hospitalQueryVo,hospital);
+
+        Example<Hospital> example = Example.of(hospital, matcher);
+        return hospitalRepository.findAll(example,pageable);
     }
 }

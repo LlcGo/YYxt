@@ -2,6 +2,7 @@ package com.lc.yyxt.cmn.service.impl;
 
 import com.alibaba.excel.EasyExcel;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.lc.yygh.model.cmn.Dict;
 import com.lc.yygh.vo.cmn.DictEeVo;
@@ -14,6 +15,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
@@ -72,6 +74,22 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         } catch (IOException e) {
             log.error("importFile err",e);
         }
+    }
+
+    @Override
+    public String getDicName(String value, String dictCode) {
+        QueryWrapper<Dict> queryWrapper = new QueryWrapper<>();
+        if(StringUtils.isEmpty(dictCode)){
+            queryWrapper.eq("value",value);
+            Dict dict = this.baseMapper.selectOne(queryWrapper);
+            return dict.getName();
+        }
+        queryWrapper.eq("dict_code",dictCode);
+        Dict dict = this.baseMapper.selectOne(queryWrapper);
+        Long parentId = dict.getId();
+        queryWrapper.eq("parent_id",parentId).eq("value",value);
+        Dict finalDict = this.baseMapper.selectOne(queryWrapper);
+        return finalDict.getName();
     }
 
 
