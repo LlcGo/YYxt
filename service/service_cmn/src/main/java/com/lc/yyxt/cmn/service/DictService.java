@@ -33,4 +33,11 @@ public interface DictService extends IService<Dict> {
      * @return
      */
     String getDicName(String value, String dictCode);
+
+    /**
+     * 根据 dictCode 查询子类的所有信息
+     * @param dictCode
+     * @return
+     */
+    List<Dict> findDicChlidren(String dictCode);
 }

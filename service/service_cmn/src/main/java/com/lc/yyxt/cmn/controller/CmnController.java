@@ -51,7 +51,12 @@ public class CmnController {
 
     @GetMapping("/{value}")
     public Result<String> getName(@PathVariable String value){
-        return Result.ok(dictService.getDicName(" ",value));
+        return Result.ok(dictService.getDicName(value,""));
+    }
+
+    @GetMapping("/findDicChlidren/{dictCode}")
+    public Result<List<Dict>> findDicChlidren(@PathVariable String dictCode){
+        return Result.ok(dictService.findDicChlidren(dictCode));
     }
 
 

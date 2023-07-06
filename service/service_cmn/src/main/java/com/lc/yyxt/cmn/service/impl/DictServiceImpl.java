@@ -84,12 +84,28 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
             Dict dict = this.baseMapper.selectOne(queryWrapper);
             return dict.getName();
         }
-        queryWrapper.eq("dict_code",dictCode);
-        Dict dict = this.baseMapper.selectOne(queryWrapper);
+        Dict dict = this.getDicChildren(dictCode);
         Long parentId = dict.getId();
         queryWrapper.eq("parent_id",parentId).eq("value",value);
         Dict finalDict = this.baseMapper.selectOne(queryWrapper);
         return finalDict.getName();
+    }
+
+    /**
+     * 根据dicCode来查询 整行
+     * @param dictCode
+     * @return
+     */
+    public Dict getDicChildren(String dictCode){
+        QueryWrapper<Dict> dictQueryWrapper = new QueryWrapper<>();
+        dictQueryWrapper.eq("dict_code",dictCode);
+        return this.baseMapper.selectOne(dictQueryWrapper);
+    }
+
+    @Override
+    public List<Dict> findDicChlidren(String dictCode) {
+        Dict dicChildren = this.getDicChildren(dictCode);
+        return this.findChildDate(dicChildren.getId());
     }
 
 

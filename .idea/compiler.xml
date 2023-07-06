@@ -9,11 +9,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common-util" />
         <module name="model" />
+        <module name="service_hosp" />
         <module name="hospital-manage" />
         <module name="service-util" />
-        <module name="service_cmn" />
         <module name="service_user" />
-        <module name="service_hosp" />
+        <module name="service_cmn" />
+        <module name="service-cmn-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,8 @@
       <module name="hospital-manage" target="1.8" />
       <module name="model" target="1.8" />
       <module name="service" target="1.8" />
+      <module name="service-client" target="1.8" />
+      <module name="service-cmn-client" target="1.8" />
       <module name="service-util" target="1.8" />
       <module name="service_cmn" target="1.8" />
       <module name="service_hosp" target="1.8" />
@@ -36,6 +39,8 @@
       <module name="hospital-manage" options="-parameters" />
       <module name="model" options="-parameters" />
       <module name="service" options="-parameters" />
+      <module name="service-client" options="-parameters" />
+      <module name="service-cmn-client" options="-parameters" />
       <module name="service-util" options="-parameters" />
       <module name="service_cmn" options="-parameters" />
       <module name="service_hosp" options="-parameters" />

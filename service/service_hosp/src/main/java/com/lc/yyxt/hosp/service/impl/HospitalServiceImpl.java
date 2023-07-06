@@ -2,6 +2,8 @@ package com.lc.yyxt.hosp.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.lc.HospitalQueryVo;
+import com.lc.cmn.client.DictFeignClient;
+import com.lc.jyxt.common.result.Result;
 import com.lc.yygh.model.hosp.Department;
 import com.lc.yygh.model.hosp.Hospital;
 import com.lc.yyxt.hosp.repostiory.HospitalRepository;
@@ -11,7 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -19,6 +23,9 @@ public class HospitalServiceImpl implements HospitalService {
 
     @Autowired
     private HospitalRepository hospitalRepository;
+
+    @Resource
+    private DictFeignClient dictFeignClient;
 
     @Override
     public void save(Map<String, Object> param) {
@@ -64,6 +71,21 @@ public class HospitalServiceImpl implements HospitalService {
         BeanUtils.copyProperties(hospitalQueryVo,hospital);
 
         Example<Hospital> example = Example.of(hospital, matcher);
-        return hospitalRepository.findAll(example,pageable);
+        Page<Hospital> hospitalPage = hospitalRepository.findAll(example, pageable);
+        //所有医院信息集合
+        List<Hospital> hospitalList = hospitalPage.getContent();
+        hospitalList.forEach(this::sethospType);
+        return hospitalPage;
+
+    }
+
+    private void sethospType(Hospital hospital) {
+        Result<String> hostype = dictFeignClient.getName(hospital.getHostype(), "Hostype");
+        Result<String> cityString = dictFeignClient.getName(hospital.getCityCode());
+        Result<String> disString = dictFeignClient.getName(hospital.getDistrictCode());
+        Result<String> provString = dictFeignClient.getName(hospital.getProvinceCode());
+        Map<String, Object> param = hospital.getParam();
+        param.put("hospTypeString",hostype.getData());
+        param.put("fullAddress",provString.getData() + cityString.getData() + disString.getData());
     }
 }
