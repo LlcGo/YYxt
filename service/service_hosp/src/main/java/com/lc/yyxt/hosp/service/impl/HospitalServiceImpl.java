@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSON;
 import com.lc.HospitalQueryVo;
 import com.lc.cmn.client.DictFeignClient;
 import com.lc.jyxt.common.result.Result;
-import com.lc.yygh.model.hosp.Department;
 import com.lc.yygh.model.hosp.Hospital;
 import com.lc.yyxt.hosp.repostiory.HospitalRepository;
 import com.lc.yyxt.hosp.service.HospitalService;
@@ -15,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -77,6 +77,26 @@ public class HospitalServiceImpl implements HospitalService {
         hospitalList.forEach(this::sethospType);
         return hospitalPage;
 
+    }
+
+    @Override
+    public boolean updateHosptalById(String id, Integer status) {
+        Hospital hospital = hospitalRepository.findById(id).get();
+        hospital.setStatus(status);
+        hospital.setUpdateTime(new Date());
+        hospitalRepository.save(hospital);
+        return true;
+    }
+
+    @Override
+    public Map<String,Object> getHospitalById(String id) {
+        HashMap<String, Object> result = new HashMap<>();
+        Hospital hospital = hospitalRepository.findById(id).get();
+        this.sethospType(hospital);
+        result.put("hospital",hospital);
+        result.put("bookingRule",hospital.getBookingRule());
+        hospital.setBookingRule(null);
+        return result;
     }
 
     private void sethospType(Hospital hospital) {

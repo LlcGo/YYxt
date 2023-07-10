@@ -20,4 +20,19 @@ public interface HospitalService {
      * @return
      */
     Page<Hospital> selectPage(Integer pageSize, Integer pageNum, HospitalQueryVo hospitalQueryVo);
+
+    /**
+     * 根据id 修改 医院上线 状态
+     * @param id
+     * @param status
+     * @return
+     */
+    boolean updateHosptalById(String id,Integer status);
+
+    /**
+     * 根据id 查询医院信息
+     * @param id
+     * @return
+     */
+    Map<String,Object> getHospitalById(String id);
 }

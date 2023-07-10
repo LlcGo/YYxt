@@ -48,48 +48,48 @@ public class ApiController {
     private DepartmentService departmentService;
 
     @PostMapping("/hospital/show")
-    public Result<Hospital> getHospital(HttpServletRequest request){
+    public Result<Hospital> getHospital(HttpServletRequest request) {
         Map<String, String[]> requesMap = request.getParameterMap();
         Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
         checkSignKey(param);
-        String hoscode = (String)param.get("hoscode");
+        String hoscode = (String) param.get("hoscode");
         Hospital hospital = hospitalService.getHospital(hoscode);
         return Result.ok(hospital);
     }
 
     @PostMapping("/saveHospital")
-    public Result saveHospital(HttpServletRequest request){
+    public Result saveHospital(HttpServletRequest request) {
         Map<String, String[]> requesMap = request.getParameterMap();
         Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
         checkSignKey(param);
         //改变图片的格式base64 讲 “ ” 改为 “+”
-        String logoData = (String)param.get("logoData");
+        String logoData = (String) param.get("logoData");
         String newLogoDate = logoData.replaceAll(" ", "+");
-        param.put("logoData",newLogoDate);
+        param.put("logoData", newLogoDate);
         hospitalService.save(param);
         return Result.ok();
     }
 
     //进行校验根据（医院管理接口传过来的唯一标识来进行判断sign_key）
     private void checkSignKey(Map<String, Object> param) {
-        String sign_key = (String)param.get("sign");
+        String sign_key = (String) param.get("sign");
         log.info("sign_key = " + sign_key);
-        String hoscode = (String)param.get("hoscode");
+        String hoscode = (String) param.get("hoscode");
         String sqlSign_key = hospitalSetService.getSignKeyByHsopitalCode(hoscode);
         //fae0b27c451c728867a567e8c1bb4e53
         String encrypt = MD5.encrypt(sqlSign_key);
-        if(!sign_key.equals(encrypt)){
+        if (!sign_key.equals(encrypt)) {
             throw new YyghException(ResultCodeEnum.SIGN_ERROR);
         }
     }
 
     @PostMapping("/saveDepartment")
-    public Result saveDepartment(HttpServletRequest request){
+    public Result saveDepartment(HttpServletRequest request) {
         Map<String, String[]> requesMap = request.getParameterMap();
         Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
         checkSignKey(param);
         boolean res = departmentService.saveDepartment(param);
-        if(!res){
+        if (!res) {
             throw new YyghException(ResultCodeEnum.SERVICE_ERROR);
         }
         return Result.ok();
@@ -97,7 +97,7 @@ public class ApiController {
 
     //查询所有的科室接口
     @PostMapping("/department/list")
-    public Result<Page<Department>> list(HttpServletRequest request){
+    public Result<Page<Department>> list(HttpServletRequest request) {
         Map<String, String[]> requesMap = request.getParameterMap();
         Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
         checkSignKey(param);
@@ -106,19 +106,19 @@ public class ApiController {
     }
 
     @PostMapping("/department/remove")
-    public Result remove(HttpServletRequest request){
+    public Result remove(HttpServletRequest request) {
         Map<String, String[]> requesMap = request.getParameterMap();
         Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
         checkSignKey(param);
         Boolean remove = departmentService.remove(param);
-        if(!remove){
+        if (!remove) {
             throw new YyghException(ResultCodeEnum.DATA_ERROR);
         }
         return Result.ok();
     }
 
     @PostMapping("/schedule/list")
-    public Result<Page<Schedule>> scheduleList(HttpServletRequest request){
+    public Result<Page<Schedule>> scheduleList(HttpServletRequest request) {
         Map<String, String[]> requesMap = request.getParameterMap();
         Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
         checkSignKey(param);
@@ -127,7 +127,7 @@ public class ApiController {
     }
 
     @PostMapping("/schedule/remove")
-    public Result scheduleRemove(HttpServletRequest request){
+    public Result scheduleRemove(HttpServletRequest request) {
         Map<String, String[]> requesMap = request.getParameterMap();
         Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
         checkSignKey(param);
@@ -136,7 +136,7 @@ public class ApiController {
     }
 
     @PostMapping("/saveSchedule")
-    public Result saveSchedule(HttpServletRequest request){
+    public Result saveSchedule(HttpServletRequest request) {
         Map<String, String[]> requesMap = request.getParameterMap();
         Map<String, Object> param = HttpRequestHelper.switchMap(requesMap);
         checkSignKey(param);
