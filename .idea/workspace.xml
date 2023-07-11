@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7165de23-2f30-4b92-bb19-dd3b2b602430" name="Default Changelist" comment="">
+    <list default="true" id="7165de23-2f30-4b92-bb19-dd3b2b602430" name="Default Changelist" comment="7/10 医院展示接口">
+      <change afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/controller/DepartmentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/controller/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/controller/HospitalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/controller/HospitalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/repostiory/HospitalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/repostiory/HospitalRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/DepartmentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/HospitalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/HospitalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/ScheduleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/ScheduleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/impl/DepartmentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/impl/HospitalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/impl/HospitalServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/impl/ScheduleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_hosp/src/main/java/com/lc/yyxt/hosp/service/impl/ScheduleServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,35 +32,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@192.168.190.100" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@192.168.190.100" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@192.168.190.100" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="yygh_cmn: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@192.168.190.100" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="yygh_hosp: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@192.168.190.100" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="yygh_manage: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FavoritesManager">
@@ -203,13 +178,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HospitalManageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="hospital-manage" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lc.hospitalmanage.HospitalManageApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ManageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="hospital-manage" />
       <extension name="coverage">
@@ -236,20 +204,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="YyxtApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="yyxt" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lc.demo.YyxtApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.HospitalManageApplicationTests.contextLoads" />
       <item itemvalue="JUnit.testMongdb.findUserLikeUsername" />
       <item itemvalue="JUnit.TestReopsitory.addDocument" />
       <item itemvalue="Spring Boot.CmnService" />
-      <item itemvalue="Spring Boot.HospitalManageApplication" />
-      <item itemvalue="Spring Boot.YyxtApplication" />
       <item itemvalue="Spring Boot.ServiceHospApplication" />
       <item itemvalue="Spring Boot.ManageApplication" />
     </list>
@@ -276,12 +235,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -338,6 +292,8 @@
       <workItem from="1688716767730" duration="44000" />
       <workItem from="1688716942920" duration="4341000" />
       <workItem from="1688971438175" duration="8710000" />
+      <workItem from="1688989984179" duration="109000" />
+      <workItem from="1689054131101" duration="10079000" />
     </task>
     <task id="LOCAL-00001" summary="6/18 微服务创建">
       <created>1687073108693</created>
@@ -402,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688632553707</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="7/10 医院展示接口">
+      <created>1688990015204</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688990015204</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,7 +382,8 @@
     <MESSAGE value="7/4 管理医院接口查询与添加" />
     <MESSAGE value="7/5 管理医院接口 ok" />
     <MESSAGE value="7/6 医院查询接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="7/6 医院查询接口" />
+    <MESSAGE value="7/10 医院展示接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="7/10 医院展示接口" />
   </component>
   <component name="WindowStateProjectService">
     <state x="292" y="0" key="#Notifications" timestamp="1687512084080">
@@ -450,18 +414,18 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="259" y="0" width="741" height="852" key="#xdebugger.evaluate/0.0.1600.852@0.0.1600.852" timestamp="1688978662081" />
-    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1688721754262">
+    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1688990020484">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1600.852@0.0.1600.852" timestamp="1688721754262" />
-    <state width="459" height="761" key="DebuggerActiveHint" timestamp="1687853985636">
+    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1600.852@0.0.1600.852" timestamp="1688990020484" />
+    <state width="532" height="761" key="DebuggerActiveHint" timestamp="1689064340744">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="459" height="761" key="DebuggerActiveHint/0.0.1600.852@0.0.1600.852" timestamp="1687853985636" />
-    <state x="661" y="57" key="FileChooserDialogImpl" timestamp="1688721771689">
+    <state width="532" height="761" key="DebuggerActiveHint/0.0.1600.852@0.0.1600.852" timestamp="1689064340744" />
+    <state x="661" y="57" key="FileChooserDialogImpl" timestamp="1688990093125">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="661" y="57" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1688721771689" />
+    <state x="661" y="57" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1688990093125" />
     <state x="617" y="299" width="366" height="366" key="Gitee.ShareDialog" timestamp="1687073344357">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
@@ -474,58 +438,62 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="645" y="286" width="339" height="279" key="Github.ShareDialog/0.0.1600.852@0.0.1600.852" timestamp="1687073416419" />
-    <state width="896" height="-15" key="GridCell.Tab.0.bottom" timestamp="1688982683614">
+    <state width="1056" height="516" key="GridCell.Tab.0.bottom" timestamp="1689064945197">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1688982683614" />
-    <state width="896" height="-15" key="GridCell.Tab.0.center" timestamp="1688982683609">
+    <state width="1056" height="516" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1689064945197" />
+    <state width="1056" height="516" key="GridCell.Tab.0.center" timestamp="1689064945197">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1688982683609" />
-    <state width="896" height="-15" key="GridCell.Tab.0.left" timestamp="1688982683609">
+    <state width="1056" height="516" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1689064945197" />
+    <state width="1056" height="516" key="GridCell.Tab.0.left" timestamp="1689064945197">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1688982683609" />
-    <state width="896" height="-15" key="GridCell.Tab.0.right" timestamp="1688982683613">
+    <state width="1056" height="516" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1689064945197" />
+    <state width="1056" height="516" key="GridCell.Tab.0.right" timestamp="1689064945197">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1688982683613" />
-    <state width="896" height="-15" key="GridCell.Tab.1.bottom" timestamp="1688982683647">
+    <state width="1056" height="516" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1689064945197" />
+    <state width="1056" height="516" key="GridCell.Tab.1.bottom" timestamp="1689064945197">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1688982683647" />
-    <state width="896" height="-15" key="GridCell.Tab.1.center" timestamp="1688982683632">
+    <state width="1056" height="516" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1689064945197" />
+    <state width="1056" height="516" key="GridCell.Tab.1.center" timestamp="1689064945197">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1688982683632" />
-    <state width="896" height="-15" key="GridCell.Tab.1.left" timestamp="1688982683621">
+    <state width="1056" height="516" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1689064945197" />
+    <state width="1056" height="516" key="GridCell.Tab.1.left" timestamp="1689064945197">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1688982683621" />
-    <state width="896" height="-15" key="GridCell.Tab.1.right" timestamp="1688982683639">
+    <state width="1056" height="516" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1689064945197" />
+    <state width="1056" height="516" key="GridCell.Tab.1.right" timestamp="1689064945197">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1688982683639" />
-    <state width="896" height="-15" key="GridCell.Tab.2.bottom" timestamp="1688982683654">
+    <state width="1056" height="516" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1689064945197" />
+    <state width="1056" height="516" key="GridCell.Tab.2.bottom" timestamp="1689064945198">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.2.bottom/0.0.1600.852@0.0.1600.852" timestamp="1688982683654" />
-    <state width="896" height="-15" key="GridCell.Tab.2.center" timestamp="1688982683654">
+    <state width="1056" height="516" key="GridCell.Tab.2.bottom/0.0.1600.852@0.0.1600.852" timestamp="1689064945198" />
+    <state width="1056" height="516" key="GridCell.Tab.2.center" timestamp="1689064945198">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.2.center/0.0.1600.852@0.0.1600.852" timestamp="1688982683654" />
-    <state width="896" height="-15" key="GridCell.Tab.2.left" timestamp="1688982683654">
+    <state width="1056" height="516" key="GridCell.Tab.2.center/0.0.1600.852@0.0.1600.852" timestamp="1689064945198" />
+    <state width="1056" height="516" key="GridCell.Tab.2.left" timestamp="1689064945198">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.2.left/0.0.1600.852@0.0.1600.852" timestamp="1688982683654" />
-    <state width="896" height="-15" key="GridCell.Tab.2.right" timestamp="1688982683654">
+    <state width="1056" height="516" key="GridCell.Tab.2.left/0.0.1600.852@0.0.1600.852" timestamp="1689064945198" />
+    <state width="1056" height="516" key="GridCell.Tab.2.right" timestamp="1689064945198">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="896" height="-15" key="GridCell.Tab.2.right/0.0.1600.852@0.0.1600.852" timestamp="1688982683654" />
+    <state width="1056" height="516" key="GridCell.Tab.2.right/0.0.1600.852@0.0.1600.852" timestamp="1689064945198" />
     <state width="276" height="551" key="HiddenNamespacesPopup" timestamp="1688366436143">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state width="276" height="551" key="HiddenNamespacesPopup/0.0.1600.852@0.0.1600.852" timestamp="1688366436143" />
+    <state x="280" y="93" key="IDE.errors.dialog" timestamp="1689064449987">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="280" y="93" key="IDE.errors.dialog/0.0.1600.852@0.0.1600.852" timestamp="1689064449987" />
     <state x="217" y="0" key="Maven.ArtifactSearchDialog" timestamp="1687332090424">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
@@ -534,14 +502,14 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="571" y="343" key="ReplaceDuplicatesPrompt/0.0.1600.852@0.0.1600.852" timestamp="1688631873217" />
-    <state x="197" y="0" key="SettingsEditor" timestamp="1688634449057">
+    <state x="197" y="0" key="SettingsEditor" timestamp="1688990031164">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="197" y="0" key="SettingsEditor/0.0.1600.852@0.0.1600.852" timestamp="1688634449057" />
-    <state x="292" y="83" key="Vcs.Push.Dialog.v2" timestamp="1688632582436">
+    <state x="197" y="0" key="SettingsEditor/0.0.1600.852@0.0.1600.852" timestamp="1688990031164" />
+    <state x="292" y="83" key="Vcs.Push.Dialog.v2" timestamp="1688990045491">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="292" y="83" key="Vcs.Push.Dialog.v2/0.0.1600.852@0.0.1600.852" timestamp="1688632582436" />
+    <state x="292" y="83" key="Vcs.Push.Dialog.v2/0.0.1600.852@0.0.1600.852" timestamp="1688990045491" />
     <state x="592" y="195" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1687075033912">
       <screen x="0" y="0" width="1600" height="852" />
     </state>

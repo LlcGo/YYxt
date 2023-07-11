@@ -58,4 +58,7 @@ public class HospitalController {
         }
         return Result.ok(hospitalService.getHospitalById(id));
     }
+
+
+
 }

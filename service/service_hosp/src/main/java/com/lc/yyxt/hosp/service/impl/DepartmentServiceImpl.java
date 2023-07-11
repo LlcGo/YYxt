@@ -3,6 +3,7 @@ package com.lc.yyxt.hosp.service.impl;
 import com.alibaba.excel.util.StringUtils;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
+import com.lc.DepartmentVo;
 import com.lc.jyxt.common.exception.YyghException;
 import com.lc.jyxt.common.result.ResultCodeEnum;
 import com.lc.yygh.model.hosp.Department;
@@ -14,8 +15,8 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @Author Lc
@@ -85,5 +86,49 @@ public class DepartmentServiceImpl implements DepartmentService {
         return true;
     }
 
+    @Override
+    public List<DepartmentVo> findDeptTree(String hoscode) {
+        if(org.apache.commons.lang.StringUtils.isBlank(hoscode)){
+            throw new YyghException(ResultCodeEnum.DATA_ERROR);
+        }
+        List<DepartmentVo> result = new ArrayList<>();
+
+        //根据医院编号，查询医院所有科室信息
+        Department departmentQuery = new Department();
+        departmentQuery.setHoscode(hoscode);
+        Example example = Example.of(departmentQuery);
+        //所有科室列表 departmentList
+        List<Department> departmentList = departmentRepository.findAll(example);
+        //进行分组 根据 bigcode
+        Map<String, List<Department>> collect = departmentList.stream()
+                .collect(Collectors.groupingBy(Department::getBigcode));
+        collect.entrySet().forEach(c ->{
+            //每一个大可是的 是code
+            String bigCode = c.getKey();
+            //大科室编号对应的全局数据
+            List<Department> deparment1List = c.getValue();
+            //封装大科室
+            DepartmentVo departmentVo1 = new DepartmentVo();
+            departmentVo1.setDepcode(bigCode);
+            departmentVo1.setDepname(deparment1List.get(0).getBigname());
+                //封装小科室
+                List<DepartmentVo> children = new ArrayList<>();
+                for(Department department: deparment1List) {
+                    DepartmentVo departmentVo2 =  new DepartmentVo();
+                    departmentVo2.setDepcode(department.getDepcode());
+                    departmentVo2.setDepname(department.getDepname());
+                    //封装到list集合
+                    children.add(departmentVo2);
+                }
+                //把小科室list集合放到大科室children里面
+                departmentVo1.setChildren(children);
+                //放到最终result里面
+                result.add(departmentVo1);
+        });
+                //返回
+                 return result;
+    }
+
 
 }
+
